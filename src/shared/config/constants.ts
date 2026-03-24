@@ -1,7 +1,16 @@
 const navLinks = [
-  {name: 'Home', path: '/'},
-  {name: 'Catalog', path: '/catalog'},
-  {name: 'Cart', path: '/cart'},
+  {
+    name: 'HOME',
+    path: '/'
+  },
+  {
+    name: 'CATALOG',
+    path: '/catalog'
+  },
+  {
+    name: 'CART',
+    path: '/cart'
+  },
 ]
 
 export default navLinks

@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('/src/shared/assets/fonts/Outfit-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('/src/shared/assets/fonts/Outfit-Light.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('/src/shared/assets/fonts/Outfit-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-primary: #272727;
+  --color-accent: #FF6543;
+  --color-text-primary: #272727;
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F5F5F5;
+  --color-border-primary: #D0D0D0;
+  --color-btn-hover: #393939;
+  --color-btn-active: #5d5d5d;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+}
