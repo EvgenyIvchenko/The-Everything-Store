@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {HiOutlineMenu, HiOutlineX} from "react-icons/hi";
 import Container from "../../shared/ui/Container/Container.tsx";
@@ -10,6 +10,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => setIsMenuOpen(prev => !prev)
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto'
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [isMenuOpen])
 
   return (
     <header className="py-4">
@@ -39,7 +46,7 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div>
+          <div className="md:hidden">
             <div
               onClick={toggleMenu}
               className={`fixed inset-0 bg-black transition-opacity duration-300 ${
@@ -47,7 +54,7 @@ const Header = () => {
               }`}
             />
             <div
-              className={`absolute top-0 right-0 flex flex-col bg-bg-primary min-w-1/2 transform transition-transform duration-800 ease-in-out ${
+              className={`fixed top-0 right-0 flex flex-col bg-bg-primary min-w-1/2 transform transition-transform duration-800 ease-in-out ${
                 isMenuOpen ? 'translate-x-0' : 'translate-x-full'
               }`}
             >
