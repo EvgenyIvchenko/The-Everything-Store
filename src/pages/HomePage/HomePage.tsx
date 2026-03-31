@@ -1,8 +1,8 @@
+import Hero from "../../widgets/Hero";
+
 const HomePage = () => {
   return (
-    <div>
-      HomePage
-    </div>
+    <Hero />
   )
 }
 

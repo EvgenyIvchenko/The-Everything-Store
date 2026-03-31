@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {HiOutlineMenu, HiOutlineX} from "react-icons/hi";
-import Container from "../../shared/ui/Container/Container.tsx";
+import Container from "../../shared/ui/Container";
 import navLinks from "../../shared/config/constants.ts";
 import ProfileIcon from "../../shared/assets/icons/profile-icon.svg?react";
 import CartIcon from "../../shared/assets/icons/cart-icon.svg?react";
@@ -19,7 +19,7 @@ const Header = () => {
   }, [isMenuOpen])
 
   return (
-    <header className="py-4">
+    <header className="py-4 bg-bg-primary">
       <Container>
         <div className="flex items-center justify-between">
           <Link
@@ -49,12 +49,12 @@ const Header = () => {
           <div className="md:hidden">
             <div
               onClick={toggleMenu}
-              className={`fixed inset-0 bg-black transition-opacity duration-300 ${
+              className={`fixed inset-0 z-10 bg-black transition-opacity duration-300 ${
                 isMenuOpen ? 'opacity-50 pointer-events-auto' : 'opacity-0 pointer-events-none'
               }`}
             />
             <div
-              className={`fixed top-0 right-0 flex flex-col bg-bg-primary min-w-1/2 transform transition-transform duration-800 ease-in-out ${
+              className={`fixed top-0 right-0 z-11 flex flex-col bg-bg-primary min-w-1/2 transform transition-transform duration-800 ease-in-out ${
                 isMenuOpen ? 'translate-x-0' : 'translate-x-full'
               }`}
             >

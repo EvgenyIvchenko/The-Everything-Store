@@ -4,10 +4,16 @@ interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  const { children, onClick } = props;
+  const {
+    children,
+    onClick
+  } = props;
 
   return (
-    <button onClick={onClick} className="px-4 py-2 bg-blue-500 text-white rounded">
+    <button
+      onClick={onClick}
+      className="px-10.5 py-4.5 bg-accent text-white font-light rounded-full"
+    >
       {children}
     </button>
   )
