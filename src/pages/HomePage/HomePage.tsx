@@ -1,8 +1,8 @@
-import Hero from "../../widgets/Hero";
+import HeroSection from "../../widgets/HeroSection";
 
 const HomePage = () => {
   return (
-    <Hero />
+    <HeroSection />
   )
 }
 

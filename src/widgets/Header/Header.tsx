@@ -5,6 +5,7 @@ import Container from "../../shared/ui/Container";
 import navLinks from "../../shared/config/constants.ts";
 import ProfileIcon from "../../shared/assets/icons/profile-icon.svg?react";
 import CartIcon from "../../shared/assets/icons/cart-icon.svg?react";
+import headerLogo from "../../shared/assets/images/logo.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,7 +28,7 @@ const Header = () => {
             className="flex items-center"
           >
             <img
-              src="src/shared/assets/images/logo.png"
+              src={headerLogo}
               className="h-10 w-auto"
               alt="The Everything Store"
             />

@@ -1,7 +1,8 @@
 import Container from "../../shared/ui/Container";
 import {Link} from "react-router-dom";
+import heroGoPro from "../../shared/assets/images/hero-gopro.png"
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <section className="bg-bg-secondary">
       <Container>
@@ -18,7 +19,7 @@ const Hero = () => {
           <div className="flex place-items-center pb-6 md:pb-0 max-w-90 md:max-w-none">
             <div className="grid place-items-center aspect-square bg-bg-hero rounded-full">
               <img
-                src="src/shared/assets/images/hero-gopro.png"
+                src={heroGoPro}
                 className="w-full max-w-150 h-auto object-cover"
                 fetchPriority="high"
                 alt="GoPro Hero9 Black"
@@ -31,4 +32,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
