@@ -6,13 +6,13 @@ const HeroSection = () => {
   return (
     <section className="bg-bg-secondary">
       <Container>
-        <div className="grid md:grid-cols-2 place-items-center gap-x-5 gap-y-10 lg:gap-x-16">
+        <div className="grid md:grid-cols-2 place-items-center gap-x-5 gap-y-10 lg:gap-x-16 pt-14 md:pt-0">
           <div className="grid self-center items-center text-center md:text-start md:pl-6 lg:pl-10">
-            <h1 className="text-4xl lg:text-[3.25rem] font-extralight leading-tight pt-14 md:p-0 mb-3 tracking-wider">GOPRO HERO9 BLACK</h1>
+            <h1 className="text-4xl lg:text-[3.25rem] font-extralight leading-tight mb-3 tracking-wider">GOPRO HERO9 BLACK</h1>
             <p className="text-xl font-extralight leading-tight mb-9">Limited stocks available. Grab it now!</p>
             <Link
               to="/catalog"
-              className="justify-self-center md:justify-self-start font-light leading-tight text-white tracking-widest w-fit px-10.5 py-4.5 bg-accent rounded-full"
+              className="justify-self-center md:justify-self-start font-light leading-tight text-white tracking-widest w-fit px-10.5 py-4.5 bg-accent rounded-full hover:scale-105 focus:scale-105 active:scale-95 duration-200"
             >SHOP COLLECTION
             </Link>
           </div>

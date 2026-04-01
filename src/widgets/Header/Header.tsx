@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 import {HiOutlineMenu, HiOutlineX} from "react-icons/hi";
 import Container from "../../shared/ui/Container";
 import navLinks from "../../shared/config/constants.ts";
-import ProfileIcon from "../../shared/assets/icons/profile-icon.svg?react";
-import CartIcon from "../../shared/assets/icons/cart-icon.svg?react";
+import Profile from "../../shared/assets/icons/profile.svg?react";
+import CartBlack from "../../shared/assets/icons/cart-black.svg?react";
 import headerLogo from "../../shared/assets/images/logo.png"
 
 const Header = () => {
@@ -39,7 +39,7 @@ const Header = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="block font-light py-1 px-2 hover:font-normal hover:scale-105 focus:scale-105 active:scale-95 duration-200"
+                    className="block font-light py-1 px-2 hover:font-normal hover:scale-105 focus:font-normal focus:scale-105 active:scale-95 duration-200"
                   >
                     {link.name}
                   </Link>
@@ -86,11 +86,17 @@ const Header = () => {
             </div>
           </div>
           <div className="flex items-center justify-center gap-x-5">
-            <Link to="#">
-              <ProfileIcon className="w-7 h-7 hover:scale-110 focus:scale-110 active:scale-95 duration-100" />
+            <Link
+              to="#"
+              className=" hover:scale-110 focus:scale-110 active:scale-95 duration-100"
+            >
+              <Profile className="w-7 h-7" />
             </Link>
-            <Link to="/cart">
-              <CartIcon className="w-7 h-7 hover:scale-110 focus:scale-110 active:scale-95 duration-100" />
+            <Link
+              to="/cart"
+              className="hover:scale-110 focus:scale-110 active:scale-95 duration-100"
+            >
+              <CartBlack className="w-7 h-7" />
             </Link>
             <button
               onClick={toggleMenu}

@@ -1,3 +1,3 @@
-import Hero from './HeroSection.tsx';
+import HeroSection from './HeroSection.tsx';
 
-export default Hero;
+export default HeroSection;
